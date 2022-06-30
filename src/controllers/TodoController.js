@@ -12,7 +12,8 @@ exports.getAllTodo = async (req, res)=> {
         res.status(200).json({
             success: true,
             message: 'todo collection found',
-            todos
+            todos,
+            count: todos.length,
         })
     } catch (error) {
         res.status(500).json({
